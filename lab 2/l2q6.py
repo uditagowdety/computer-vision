@@ -15,3 +15,4 @@ cv.circle(copied, maxloc,50, (0, 0, 255), 2)
 
 cv.imshow("brightest spot",copied)
 cv.waitKey(0)
+#????
