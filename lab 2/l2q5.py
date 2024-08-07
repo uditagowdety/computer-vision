@@ -1,23 +1,19 @@
 import cv2 as cv
-import matplotlib.pyplot as plt
 import numpy as np
 
-path=r"C:\Users\student\PycharmProjects\220962410_Udita\flower.jpg"
-img_bgr=cv.imread(path,0)
-img=cv.cvtColor(img_bgr, cv.COLOR_BGR2RGB)
+path=r"C:\Users\udita\PycharmProjects\cv\study.jpeg"
+img=cv.imread(path,0)
+
+t_lower=140
 
 
+rows, cols=img.shape
 
-plt.subplot(121)
-plt.title("original image")
-plt.imshow(img)
-plt.xticks([])
-plt.yticks([])
-
-plt.subplot(122)
-plt.title("contrast stretched image")
-plt.imshow(contrast)
-plt.xticks([])
-plt.yticks([])
-
-plt.show()
+for i in range(rows):
+    for j in range(cols):
+        if img[i,j]>t_lower:
+            img[i,j]=255
+        else:
+            img[i,j]=0
+cv.imshow("gray slicing",img)
+cv.waitKey(0)
