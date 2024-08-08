@@ -4,7 +4,7 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-path=r"C:\Users\student\PycharmProjects\220962410_Udita\flower.jpg"
+path=r"C:\Users\student\PycharmProjects\220962410_Udita\images\flower.jpg"
 img=cv.imread(path,0)
 
 box_filter=np.ones((3,3))/9
@@ -29,20 +29,38 @@ median_img = cv.medianBlur(img, filter_size)
 
 plt.subplot(231)
 plt.imshow(img, cmap="gray")
+plt.title("original image")
+plt.xticks([])
+plt.yticks([])
 
 plt.subplot(232)
 plt.imshow(box_img, cmap="gray")
+plt.title("box blur")
+plt.xticks([])
+plt.yticks([])
 
 plt.subplot(233)
 plt.imshow(gaussian_img, cmap="gray")
+plt.title("gaussian blur")
+plt.xticks([])
+plt.yticks([])
 
 plt.subplot(234)
 plt.imshow(sharp_img, cmap="gray")
+plt.title("sharpness w matrix")
+plt.xticks([])
+plt.yticks([])
 
 plt.subplot(235)
 plt.imshow(unmasked_sharp, cmap="gray")
+plt.title("unsharp masking")
+plt.xticks([])
+plt.yticks([])
 
 plt.subplot(236)
 plt.imshow(median_img, cmap="gray")
+plt.title("median filter")
+plt.xticks([])
+plt.yticks([])
 
 plt.show()
