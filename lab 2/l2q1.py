@@ -11,6 +11,7 @@ path=r"C:\Users\student\PycharmProjects\220962410_Udita\flower.jpg"
 img=cv.imread(path)
 img_rgb=cv.cvtColor(img, cv.COLOR_BGR2RGB)
 neg=abs(255-img_rgb)
+cv.imwrite(r"C:\Users\student\PycharmProjects\220962410_Udita\neg_flower.jpg", neg)
 
 titles=["original image", "negative image"]
 images=[img_rgb, neg]
