@@ -8,7 +8,7 @@ img=cv.cvtColor(img_bgr, cv.COLOR_BGR2RGB)
 
 gamma=0.5
 gamma_corr=np.array(255*(img/255)**gamma, dtype=np.uint8)
-cv.imwrite(r"C:\Users\student\PycharmProjects\220962410_Udita\gamma.jpg",gamma_corr)
+cv.imwrite(r"C:\Users\student\PycharmProjects\220962410_Udita\images\gamma_flower.jpg",gamma_corr)
 
 plt.subplot(121)
 plt.title("original image")

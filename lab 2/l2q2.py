@@ -10,7 +10,7 @@ c=255/(np.log(1+np.max(img_asfloat)))
 log=c*np.log(1+img_asfloat)
 
 log=np.array(log,dtype=np.uint8)
-newpath=r"C:\Users\student\PycharmProjects\220962410_Udita\log_flower.jpg"
+newpath=r"C:\Users\student\PycharmProjects\220962410_Udita\images\log_flower.jpg"
 cv.imwrite(newpath,log)
 
 titles=["original image", "log transformed image"]
