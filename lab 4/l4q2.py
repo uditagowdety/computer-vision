@@ -20,6 +20,14 @@ plt.imshow(blurred_img,cmap="gray")
 plt.title("blurred image")
 plt.show()
 
+edges = cv.Canny(blurred_img, threshold1=100, threshold2=200)
+
+# Display the result
+plt.imshow(edges, cmap='gray')
+plt.title('Canny Edge Detection')
+plt.axis('off')
+plt.show()
+
 #step 3.1: compute the x and y gradients using sobel operators
 sobel_x=np.array([[1,0,-1],
                   [2,0,-2],
